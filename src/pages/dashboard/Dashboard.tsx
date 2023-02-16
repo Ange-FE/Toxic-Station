@@ -18,7 +18,7 @@ const Dashboard = () => {
             // TODO: recreate LunaPrice with coingecko API
             // isClassic && <LunaPrice />
           }
-          <CommunityPool />
+          <CommunityPool/>
         </header>
 
         <Charts />

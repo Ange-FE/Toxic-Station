@@ -57,7 +57,6 @@ const ValidatorsList = ({
       })
       .sort((a, b) => b.rank - a.rank)
   }, [validators, showAll])
-
   if (!activeValidators) return null
 
   return (

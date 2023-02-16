@@ -104,6 +104,67 @@
   }
 }
 
+.toxic  {
+  --button-primary-bg-h: 125;
+  --button-primary-bg-s: 90%;
+  --button-primary-bg-l: 21%;
+  --button-primary-bg: hsl(
+    var(--button-primary-bg-h),
+    var(--button-primary-bg-s),
+    var(--button-primary-bg-l)
+  );
+  --button-primary-text: hsl(0 0% 95%);
+  --button-default-bg-h: 240;
+  --button-default-bg-s: 5%;
+  --button-default-bg-l: 22%;
+  --button-default-bg: hsl(
+    var(--button-default-bg-h),
+    var(--button-default-bg-s),
+    var(--button-default-bg-l)
+  );
+  --button-default-text: hsl(0 0% 87%);
+
+  --dark-button-hover-only: hsl(
+    var(--button-default-bg-h),
+    var(--button-default-bg-s),
+    calc(var(--button-default-bg-l) - 2%)
+  );
+
+  --menu-bg: hsl(240, 6%, 21%);
+  --menu-border: hsl(240, 5%, 21%);
+  --menu-text: hsl(0, 0%, 91%);
+
+  --link: var(--button-primary-bg);
+  --text: hsl(0, 0%, 95%);
+  --text-muted: hsl(0 0% 55%);
+  --chart: hsl(125 90% 21%);
+
+  --bg: hsl(0, 0%, 12%);
+  --bg-muted: hsl(240 5% 22%);
+  --card-bg: hsl(239, 6%, 17%);
+  --card-bg-muted: hsl(240, 5%, 15%);
+  --card-border: hsl(240 5% 22%);
+  --input-bg: var(--card-bg);
+  --input-border: hsl(0 0% 30%);
+
+  --wallet-shadow: 0 0 15px 3px #000000c7;
+
+  --extension-bg: var(--card-bg);
+  --extension-text: var(--text);
+  
+  --wallet-shadow-color: #0000009c;
+
+  #station{
+    background-image: url("mainBackground.png");
+    background-size: 100%;
+  }
+  a[href="/dashboard"] > svg,
+  a[href="/projects"] > svg{
+    filter: invert(26%) sepia(35%) saturate(2009%) hue-rotate(88deg) brightness(97%) contrast(98%);
+  }
+
+}
+
 .dark {
   --button-primary-bg-h: 224;
   --button-primary-bg-s: 82%;
@@ -247,56 +308,7 @@
   --wallet-shadow-color: #000000c7;
 }
 
-.toxic  {
-  --button-primary-bg-h: 125;
-  --button-primary-bg-s: 90%;
-  --button-primary-bg-l: 21%;
-  --button-primary-bg: hsl(
-    var(--button-primary-bg-h),
-    var(--button-primary-bg-s),
-    var(--button-primary-bg-l)
-  );
-  --button-primary-text: hsl(0 0% 95%);
-  --button-default-bg-h: 240;
-  --button-default-bg-s: 5%;
-  --button-default-bg-l: 22%;
-  --button-default-bg: hsl(
-    var(--button-default-bg-h),
-    var(--button-default-bg-s),
-    var(--button-default-bg-l)
-  );
-  --button-default-text: hsl(0 0% 87%);
 
-  --dark-button-hover-only: hsl(
-    var(--button-default-bg-h),
-    var(--button-default-bg-s),
-    calc(var(--button-default-bg-l) - 2%)
-  );
-
-  --menu-bg: hsl(240, 6%, 21%);
-  --menu-border: hsl(240, 5%, 21%);
-  --menu-text: hsl(0, 0%, 91%);
-
-  --link: var(--button-primary-bg);
-  --text: hsl(0, 0%, 95%);
-  --text-muted: hsl(0 0% 55%);
-  --chart: hsl(125 90% 21%);
-
-  --bg: hsl(0, 0%, 12%);
-  --bg-muted: hsl(240 5% 22%);
-  --card-bg: hsl(239, 6%, 17%);
-  --card-bg-muted: hsl(240, 5%, 15%);
-  --card-border: hsl(240 5% 22%);
-  --input-bg: var(--card-bg);
-  --input-border: hsl(0 0% 30%);
-
-  --wallet-shadow: 0 0 15px 3px #000000c7;
-
-  --extension-bg: var(--card-bg);
-  --extension-text: var(--text);
-  
-  --wallet-shadow-color: #0000009c;
-}
 
 .whale {
   --button-primary-bg-h: 0;

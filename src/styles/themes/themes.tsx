@@ -24,6 +24,8 @@ import { ReactComponent as PreviewBlossom } from "./Blossom/preview.svg"
 import { ReactComponent as PreviewMoon } from "./Moon/preview.svg"
 import { ReactComponent as PreviewWhale } from "./Whale/preview.svg"
 import { ReactComponent as PreviewMadness } from "./Madness/preview.svg"
+import { ReactComponent as PreviewToxic } from "./Toxic/preview.svg"
+
 
 export interface Theme {
   name: string
@@ -35,6 +37,13 @@ export interface Theme {
 }
 
 export const themes: Theme[] = [
+  {
+    name: "toxic",
+    unlock: toAmount("0"),
+    animation: AnimationMadness,
+    favicon: FaviconMadness,
+    preview: <PreviewToxic/>,
+  },
   {
     name: "light",
     unlock: toAmount("0"),
@@ -77,13 +86,7 @@ export const themes: Theme[] = [
     favicon: FaviconMadness,
     preview: <PreviewMadness />,
   },
-  {
-    name: "toxic",
-    unlock: toAmount("0"),
-    animation: AnimationMadness,
-    favicon: FaviconMadness,
-    preview: <PreviewMadness />,
-  },
+  
 ]
 
 export default themes

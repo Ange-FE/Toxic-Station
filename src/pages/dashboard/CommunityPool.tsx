@@ -7,6 +7,7 @@ import { Read } from "components/token"
 import SelectDenom from "./components/SelectDenom"
 import DashboardContent from "./components/DashboardContent"
 import {useChainID } from "data/wallet"
+
 const CommunityPool = () => {
   const { t } = useTranslation()
   const title = t("Community pool")

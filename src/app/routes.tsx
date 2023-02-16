@@ -8,12 +8,15 @@ import { ReactComponent as StakeIcon } from "styles/images/menu/Stake.svg"
 import { ReactComponent as GovernanceIcon } from "styles/images/menu/Governance.svg"
 import { ReactComponent as ContractIcon } from "styles/images/menu/Contract.svg"
 import { ReactComponent as NFTIcon } from "styles/images/menu/NFT.svg"
+import { ReactComponent as ToxicIcon } from "styles/images/menu/Toxic.svg"
+
 /* menu */
 import History from "pages/history/History"
 import NFT from "pages/nft/NFT"
 import Dashboard from "pages/dashboard/Dashboard"
 import Stake from "pages/stake/Stake"
 import Governance from "pages/gov/Governance"
+import Projects from "pages/projects/Projects"
 import Contract from "pages/contract/Contract"
 import {useChainID } from "data/wallet"
 /* details */
@@ -60,14 +63,14 @@ export const useNav = () => {
   let menu;
   if(chainID !== ""){
     menu = [
-
       {
-        path: "/",
+        path: "/dashboard",
         element: <Dashboard />,
         title: t("Dashboard"),
+        icon: <ToxicIcon {...ICON_SIZE} />,
       },
       {
-        path: "/",
+        path: "/Swap",
         element: <SwapTx />,
         title: t("Swap"),
         icon: <SwapIcon {...ICON_SIZE} />,
@@ -102,11 +105,17 @@ export const useNav = () => {
         title: t("NFT"),
         icon: <NFTIcon {...ICON_SIZE} />,
       },
+      {
+        path: "/projects",
+        element: <Projects/>,
+        title: t("Projects"),
+        icon: <ToxicIcon {...ICON_SIZE} />,
+      },
     ]
   }else{
     menu = [
       {
-        path: "/",
+        path: "/Swap",
         element: <SwapTx />,
         title: t("Swap"),
         icon: <SwapIcon {...ICON_SIZE} />,

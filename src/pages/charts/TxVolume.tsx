@@ -14,17 +14,22 @@ import { TooltipIcon } from "components/display"
 import ChartContainer from "./components/ChartContainer"
 import Filter from "./components/Filter"
 import Range from "./components/Range"
+import {useChainID } from "data/wallet"
+
 
 const TxVolume = () => {
   const { t } = useTranslation()
   const currency = useCurrency()
-
+  const chainID = useChainID()
   /* data */
   const [denom, setDenom] = useState("uluna")
   const [type, setType] = useState<Aggregate>(Aggregate.PERIODIC)
   const { data: activeDenoms } = useActiveDenoms()
   const { data, ...state } = useTxVolume(denom, type)
-
+  let nameCoin = "Luna";
+  if(chainID === "columbus-5"){
+    nameCoin = "Lunc";
+  }
   /* render */
   const renderFilter = () => {
     if (!activeDenoms) return null
@@ -35,7 +40,7 @@ const TxVolume = () => {
             .filter(isDenomTerraNative)
             .map((denom) => (
               <option value={denom} key={denom}>
-                {readDenom(denom)}
+                {nameCoin}
               </option>
             ))}
         </Select>
@@ -92,7 +97,7 @@ const TxVolume = () => {
               result={data}
               range={range}
               total={calcValue(range)}
-              unit={readDenom(denom)}
+              unit={nameCoin}
               formatValue={(value) => readAmount(value, { prefix: true })}
               formatY={(value) =>
                 readAmount(value, { prefix: true, integer: true })
