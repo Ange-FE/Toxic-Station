@@ -8,6 +8,7 @@ import { getLocalSetting, setLocalSetting } from "utils/localStorage"
 import { debug } from "utils/env"
 import { useAddress, useChainID, useNetworkName } from "data/wallet"
 import { calcDelegationsTotal, useDelegations } from "../queries/staking"
+import ToxicIcon from "styles/images/menu/ToxicLabsLogo.svg"
 
 export const themeNameState = atom({
   key: "themeName",
@@ -49,7 +50,7 @@ export const useThemeState = () => {
       if (!validate(nextTheme)) set(DefaultTheme)
       if (prevTheme.name) document.body.classList.remove(prevTheme.name)
       if (nextTheme.name) document.body.classList.add(nextTheme.name)
-      setFavicon(nextTheme.favicon)
+      setFavicon(ToxicIcon)
       setThemeName(nextTheme.name)
       setLocalSetting<Theme["name"]>(SettingKey.Theme, nextTheme.name)
     },

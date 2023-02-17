@@ -8,8 +8,8 @@ import { ReactComponent as StakeIcon } from "styles/images/menu/Stake.svg"
 import { ReactComponent as GovernanceIcon } from "styles/images/menu/Governance.svg"
 import { ReactComponent as ContractIcon } from "styles/images/menu/Contract.svg"
 import { ReactComponent as NFTIcon } from "styles/images/menu/NFT.svg"
-import { ReactComponent as ToxicIcon } from "styles/images/menu/Toxic.svg"
-
+import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
+import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 /* menu */
 import History from "pages/history/History"
 import NFT from "pages/nft/NFT"
@@ -40,6 +40,7 @@ import UpdateAdminContractTx from "txs/wasm/UpdateAdminContractTx"
 import SignMultisigTxPage from "pages/multisig/SignMultisigTxPage"
 import PostMultisigTxPage from "pages/multisig/PostMultisigTxPage"
 
+
 /* auth */
 import Auth from "auth/modules/Auth"
 //import ManageNetworksPage from "auth/networks/ManageNetworksPage"
@@ -55,7 +56,9 @@ import Labs from "pages/labs/Labs"
 import NotFound from "pages/NotFound"
 import DonateAllVestingTokensTx from "txs/stake/DonateAllVestingTokensTx"
 
-const ICON_SIZE = { width: 20, height: 20 }
+const ICON_SIZE = { width: 25, height: 25 }
+
+
 
 export const useNav = () => {
   const { t } = useTranslation()
@@ -67,10 +70,10 @@ export const useNav = () => {
         path: "/dashboard",
         element: <Dashboard />,
         title: t("Dashboard"),
-        icon: <ToxicIcon {...ICON_SIZE} />,
+        icon: <AutoAwesomeMosaicIcon {...ICON_SIZE} />,
       },
       {
-        path: "/Swap",
+        path: "/",
         element: <SwapTx />,
         title: t("Swap"),
         icon: <SwapIcon {...ICON_SIZE} />,
@@ -109,13 +112,14 @@ export const useNav = () => {
         path: "/projects",
         element: <Projects/>,
         title: t("Projects"),
-        icon: <ToxicIcon {...ICON_SIZE} />,
-      },
+        icon: <LaptopChromebookIcon {...ICON_SIZE} />,
+      }
+      
     ]
   }else{
     menu = [
       {
-        path: "/Swap",
+        path: "/",
         element: <SwapTx />,
         title: t("Swap"),
         icon: <SwapIcon {...ICON_SIZE} />,

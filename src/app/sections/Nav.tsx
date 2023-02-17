@@ -8,6 +8,7 @@ import { useNav } from "../routes"
 import styles from "./Nav.module.scss"
 import { useThemeFavicon } from "data/settings/Theme"
 import { isWalletBarOpen } from "pages/wallet/Wallet"
+import ToxicIcon from "styles/images/menu/ToxicLabsLogo.svg"
 
 const cx = classNames.bind(styles)
 
@@ -22,7 +23,7 @@ const Nav = () => {
     <nav>
       <header className={styles.header}>
         <div className={classNames(styles.item, styles.logo)}>
-          <img src={icon} alt="Station" />{" "}
+          <img src={ToxicIcon} alt="Station" />{" "}
           <strong className={styles.title}>Toxic Station</strong>
         </div>
         {isOpen && (

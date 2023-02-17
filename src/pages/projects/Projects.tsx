@@ -3,45 +3,59 @@ import styles from "./Projects.module.scss"
 import { useChainID } from "data/wallet"
 import ginkou from "./Ginkou.png"
 import cavern from "./CavernProtocol.svg"
-//import ToxicLabsDao from "../aboutus/ToxicLabsDao.jpg"
+import ToxicLabsDao from "../../styles/images/menu/ToxicLabsLogo.svg"
+
+
 
 const Projects = () => {
     const chainID = useChainID()
     //let supportedProjects = "";  
     return (
-        <Page title="Supported Projects">
+        <Page>
             {chainID === "phoenix-1" && (
                 <Card>
-                    <span>
-                        <img className={styles.image} src={cavern}></img>
-                        <a className={styles.title} href="https://cavernprotocol.com/" target="_blank">Cavern Protocol</a>
-                    </span>
-                    <p>Based on the money-market principles of Anchor Protocol and with slight added differences, Cavern aims to become a safe place for user to lend and borrow funds by creating a fully decentralized platform.</p>
-                </Card>
-            )}
-            {chainID === "columbus-5" && (
-                <Card>
-                    <span>
-                        <img className={styles.image} src={ginkou}></img>
-                        <p className={styles.title}>Coming Soon for you Ginkou</p>
-                    </span>
-                    <p>Based on the money-market principles of Cavern Protocol.</p>
+                    <h1 className={styles.heading}>
+                        Supported Projects
+                    </h1>
+                    <Card>
+                        <span>
+                            <img className={styles.image} src={cavern}></img>
+                            <a className={styles.title} href="https://cavernprotocol.com/" target="_blank">Cavern Protocol</a>
+                        </span>
+                        <p>Based on the money-market principles of Anchor Protocol and with slight added differences, Cavern aims to become a safe place for users to lend and borrow funds by creating a fully decentralized platform.</p>
+                    </Card>
                 </Card>
             )}
             <div className={styles.space}>
-            
             </div>
+            <div className={styles.space}></div>
             {chainID === "columbus-5" && (
                 <Card>
-                    <span>
-                        <p className={styles.title}>Coming Soon for you Toxic DEX</p>
-                    </span>
-                    <p>The Toxic Dex will allow for swapping LUNC & USTC pairs as well as other denoms</p>
+                    <h1 className={styles.heading}>
+                        Projects By Toxic Labs
+                    </h1>
+                    <Card>
+                        <span>
+                            <img className={styles.image} src={ginkou}></img>
+                            <a className={styles.title} target="_blank">Coming to your screen soon: Ginkou</a>
+                        </span>
+                        <p>Based on the money-market principles of Cavern Protocol which is Based on the money-market principles of Anchor Protocol and with slight added differences, Ginkou aims to become a safe place for users to lend and borrow funds by creating a fully decentralized platform.</p>
+                    </Card>
+
+                    <div className={styles.space}>
+
+                    </div>
+                    <Card>
+                        <span>
+                        <img className={styles.image} src={ToxicLabsDao}></img>
+                            <a className={styles.title} target="_blank">Coming to your screen soon: Toxic DEX</a>
+                        </span>
+                        <p>The Toxic Dex will allow for swapping LUNC & USTC pairs as well as other assets</p>
+                    </Card>
+                    <div className={styles.space}>
+                    </div>
                 </Card>
             )}
-            <div className={styles.space}>
-            
-            </div>
         </Page>
     )
 }
