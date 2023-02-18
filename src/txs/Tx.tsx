@@ -104,9 +104,6 @@ function Tx<TxValues>(props: Props<TxValues>) {
   const setLatestTx = useSetRecoilState(latestTxState)
   const isBroadcasting = useRecoilValue(isBroadcastingState)
   const readNativeDenom = useNativeDenoms()
-
-  console.log(" ********** isTaxable");
-  console.log(isTaxable);
   const isClassic = networks[chain]?.isClassic
   const shouldTax = isClassic && getShouldTax(token, isClassic)
   const { data: taxRate = "0", ...taxRateState } = useTaxRate(!shouldTax)
@@ -200,8 +197,6 @@ function Tx<TxValues>(props: Props<TxValues>) {
     token && amount && shouldTax && isTaxable
       ? calcMinimumTaxAmount(amount, { rate: taxRate, cap: taxCap })
       : undefined
-  console.log("******* taxAmount")
-  console.log(taxAmount)
   /* (effect): Log error on console */
   const failed = getErrorMessage(taxState.error ?? estimatedGasState.error)
   useEffect(() => {
