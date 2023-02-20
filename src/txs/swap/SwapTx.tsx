@@ -36,7 +36,6 @@ const SwapTx = () => {
       </Page>
     )
   }
-
   return (
     <Page title={t("Swap")} small extra={<TFMPoweredBy />}>
       <TFMSwapContext>

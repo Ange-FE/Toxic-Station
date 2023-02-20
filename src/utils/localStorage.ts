@@ -21,9 +21,12 @@ export enum SettingKey {
   MinimumValue = "MinimumValue", // Wallet (UST value to show on the list)
   WithdrawAs = "WithdrawAs", // Rewards (Preferred denom to withdraw rewards)
 }
-
+/*
 const isSystemDarkMode =
   window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+*/
+
+
 
 export const DefaultTheme = themes[0]
 

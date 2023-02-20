@@ -34,8 +34,8 @@ import DepositTx from "txs/gov/DepositTx"
 import VoteTx from "txs/gov/VoteTx"
 import StoreCodeTx from "txs/wasm/StoreCodeTx"
 import InstantiateContractTx from "txs/wasm/InstantiateContractTx"
-import ExecuteContractTx from "txs/wasm/ExecuteContractTx"
-import MigrateContractTx from "txs/wasm/MigrateContractTx"
+//import ExecuteContractTx from "txs/wasm/ExecuteContractTx"
+//import MigrateContractTx from "txs/wasm/MigrateContractTx"
 import UpdateAdminContractTx from "txs/wasm/UpdateAdminContractTx"
 import SignMultisigTxPage from "pages/multisig/SignMultisigTxPage"
 import PostMultisigTxPage from "pages/multisig/PostMultisigTxPage"
@@ -172,8 +172,8 @@ export const useNav = () => {
     { path: "/proposal/:chain/:id/vote", element: <VoteTx /> },
     { path: "/contract/instantiate", element: <InstantiateContractTx /> },
     { path: "/contract/store", element: <StoreCodeTx /> },
-    { path: "/contract/execute/:contract", element: <ExecuteContractTx /> },
-    { path: "/contract/migrate/:contract", element: <MigrateContractTx /> },
+    //{ path: "/contract/execute/:contract", element: <ExecuteContractTx /> },
+    //{ path: "/contract/migrate/:contract", element: <MigrateContractTx /> },
     {
       path: "/contract/updateadmin/:contract",
       element: <UpdateAdminContractTx />,

@@ -41,9 +41,12 @@ export interface Theme {
   donutColors?: string[]
 }
 
-let easterDay: number = 0;
+//let easterDay: number = 0;
 let easterMonth: number = 0;
 
+
+
+/*
 function Easter(Y: number) {
   var C = Math.floor(Y / 100);
   var N = Y - 19 * Math.floor(Y / 19);
@@ -63,6 +66,9 @@ function Easter(Y: number) {
 }
 
 function padout(number: number) { return (number < 10) ? '0' + number : number; }
+*/
+
+
 
 const getThemes = () => {
 
@@ -132,7 +138,7 @@ const getThemes = () => {
   const mm = String(today.getMonth() + 1).padStart(2, '0');
   const day: number = +dd;
   const month: number = +mm;
-  const curentYear = today.getFullYear();
+  //const curentYear = today.getFullYear();
 
   //console.log("Easter 2023"+(Easter(curentYear)))
   // console.log("easterDay:"+easterDay);
@@ -140,7 +146,7 @@ const getThemes = () => {
 
   const easterPlusOne = 0;
   const weekBeforeEaster = 0;
-  if (month == 2 && day >= 7 && day < 15) {
+  if (month === 2 && day >= 7 && day < 15) {
     currentTheme.unshift({
       name: "valentines",
       unlock: toAmount("0"),
@@ -149,12 +155,12 @@ const getThemes = () => {
       preview: <PreviewValentinesday />,
 
     })
-  } else if (month == easterMonth && day >= weekBeforeEaster && day < easterPlusOne) {
+  } else if (month === easterMonth && day >= weekBeforeEaster && day < easterPlusOne) {
     // easter theme 
-  } else if (month == 10 && day >= 24 && day <= 31) {
+  } else if (month === 10 && day >= 24 && day <= 31) {
     // halloween theme 
   }
-  else if (month == 12 && day >= 18 && day <= 25) {
+  else if (month === 12 && day >= 18 && day <= 25) {
     // christmas theme
   }
   return currentTheme
@@ -164,3 +170,15 @@ export const themes: Theme[] = getThemes()
 
 
 export default themes
+
+
+/*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 116">
+  <path fill="#1C1C1C" d="M0 0h220v116H0z"/> 
+  <path fill="#FFFFFF" d="M0 0h220v18H0z"/> Top heading 
+  <path fill="#43DA25" d="M0 0h50v116H0z"/> Left Navigation Panel 
+  <path fill="#3C3C3C" d="M102 33h65a4 4 0 0 1 4 4v59a4 4 0 0 1-4 4h-65a4 4 0 0 1-4-4V37a4 4 0 0 1 4-4Z"/>
+  <path fill="#05660d" d="M112 82h46a5 5 0 1 1 0 10h-46a5 5 0 1 1 0-10Z"/>
+</svg>
+
+*/

@@ -37,14 +37,13 @@ const Preferences = () => {
   const { id: currencyId } = useCurrency()
   const networkName = useNetworkName()
   const { name } = useTheme()
-
+  
   const routes: Record<Routes, SettingsPage> = {
     network: {
       key: "network",
       tab: t("Network"),
       value: capitalize(networkName),
-      disabled:
-        !sandbox && connectedWallet.status === WalletStatus.WALLET_CONNECTED,
+      disabled: !sandbox && connectedWallet.status === WalletStatus.WALLET_CONNECTED,
     },
     lang: {
       key: "lang",
