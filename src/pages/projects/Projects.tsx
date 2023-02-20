@@ -6,16 +6,6 @@ import cavern from "./CavernProtocol.svg"
 import ToxicLabsDao from "../../styles/images/menu/ToxicLabsLogo.svg"
 
 
-/*
-
-
-
-
-
-
-*/
-
-
 const Projects = () => {
     const chainID = useChainID()
     //let supportedProjects = "";  

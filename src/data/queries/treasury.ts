@@ -9,7 +9,6 @@ export const useTaxRate = (disabled = false) => {
     [queryKey.treasury.taxRate],
     async () => {
       const taxRate = await lcd.treasury.taxRate()
-      console.log("**************** taxRate:" + taxRate);
       return taxRate.toString() || "0"
     },
     { ...RefetchOptions.INFINITY, enabled: !disabled }

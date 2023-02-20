@@ -1,3 +1,3 @@
 export const isTerraChain = (chainID: string) => {
-  return chainID.startsWith("phoenix-") || chainID.startsWith("pisco-") || chainID.startsWith("columbus-")
+  return chainID.startsWith("phoenix-") || chainID.startsWith("pisco-")
 }
