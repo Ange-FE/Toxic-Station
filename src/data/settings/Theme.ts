@@ -9,6 +9,11 @@ import { debug } from "utils/env"
 import { useAddress, useChainID, useNetworkName } from "data/wallet"
 import { calcDelegationsTotal, useDelegations } from "../queries/staking"
 import ToxicIcon from "styles/images/menu/ToxicLabsLogo.svg"
+import valentinesImage1 from "styles/themes/Valentinesday/valentinesImage1.png"
+import valentinesImage2 from "styles/themes/Valentinesday/valentinesImage2.png"
+import valentinesImage3 from "styles/themes/Valentinesday/valentinesImage3.png"
+import valentinesImage4 from "styles/themes/Valentinesday/valentinesImage4.png"
+
 
 export const themeNameState = atom({
   key: "themeName",
@@ -45,11 +50,39 @@ export const useThemeState = () => {
   const prevTheme = findTheme(prevName)
   const validate = useValidateTheme()
 
+  
+
   const set = useCallback(
     (nextTheme: Theme) => {
       if (!validate(nextTheme)) set(DefaultTheme)
       if (prevTheme.name) document.body.classList.remove(prevTheme.name)
       if (nextTheme.name) document.body.classList.add(nextTheme.name)
+      if(nextTheme.name == "valentines"){
+        const bgImagesValentines = [
+          valentinesImage1,
+          valentinesImage2,
+          valentinesImage3,
+          valentinesImage4
+        ]
+        const bgImageValentines = bgImagesValentines[Math.floor(Math.random()*bgImagesValentines.length)];
+          document.body.style.backgroundImage = "url("+bgImageValentines+")";
+          document.body.style.backgroundSize = "100%";
+      }
+      /*
+      if(nextTheme.name == "toxic"){
+        const bgImagesToxic = [
+          toxicImage1,
+          toxicImage2,
+          toxicImage3,
+          toxicImage4,
+          toxicImage5
+        ]
+        const bgImageToxic = bgImagesToxic[Math.floor(Math.random()*bgImagesToxic.length)];
+          document.body.style.backgroundImage = "url("+bgImageToxic+")";
+          document.body.style.backgroundSize = "100%";
+      }
+      */
+      
       setFavicon(ToxicIcon)
       setThemeName(nextTheme.name)
       setLocalSetting<Theme["name"]>(SettingKey.Theme, nextTheme.name)

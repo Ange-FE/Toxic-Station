@@ -17,6 +17,9 @@ const Selector = () => {
   const { t } = useTranslation()
   const [current, setTheme] = useThemeState()
   const validate = useValidateTheme()
+  
+
+
 
   return (
     <Grid gap={28} columns={2}>
