@@ -37,14 +37,14 @@ const ValidatorsList = ({
     delegationsState,
     undelegationsState
   )
-
+  const MAX_COMMISSION = 0.05
   const activeValidators = useMemo(() => {
     if (!validators) return null
     const priorityVals = getPriorityVals(validators)
     const calcRate = getCalcVotingPowerRate(validators)
 
     return validators
-      .filter(({ status }) => showAll || !getIsUnbonded(status))
+      .filter(({ status, commission }) => (showAll || !getIsUnbonded(status))  && Number(commission.commission_rates.rate) >= MAX_COMMISSION && chainID == "columbus-5")
       .map((validator) => {
         const { operator_address } = validator
         const voting_power_rate = calcRate(operator_address)
@@ -57,6 +57,7 @@ const ValidatorsList = ({
       })
       .sort((a, b) => b.rank - a.rank)
   }, [validators, showAll])
+
   if (!activeValidators) return null
 
   return (
