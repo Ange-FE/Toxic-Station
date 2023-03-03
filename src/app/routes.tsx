@@ -17,6 +17,7 @@ import Dashboard from "pages/dashboard/Dashboard"
 import Stake from "pages/stake/Stake"
 import Governance from "pages/gov/Governance"
 import Projects from "pages/projects/Projects"
+import Home from "pages/home/Home"
 import Contract from "pages/contract/Contract"
 import {useChainID } from "data/wallet"
 /* details */
@@ -67,13 +68,17 @@ export const useNav = () => {
   if(chainID !== ""){
     menu = [
       {
+        path: "/",
+        element: <Home/>,
+      },
+      {
         path: "/dashboard",
         element: <Dashboard />,
         title: t("Dashboard"),
         icon: <AutoAwesomeMosaicIcon {...ICON_SIZE} />,
       },
       {
-        path: "/",
+        path: "/Swap",
         element: <SwapTx />,
         title: t("Swap"),
         icon: <SwapIcon {...ICON_SIZE} />,
@@ -120,6 +125,10 @@ export const useNav = () => {
     menu = [
       {
         path: "/",
+        element: <Home/>,
+      },
+      {
+        path: "/Swap",
         element: <SwapTx />,
         title: t("Swap"),
         icon: <SwapIcon {...ICON_SIZE} />,

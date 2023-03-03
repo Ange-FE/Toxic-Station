@@ -12,6 +12,7 @@ import ToxicIcon from "styles/images/menu/ToxicLabsLogo.svg"
 
 const cx = classNames.bind(styles)
 
+
 const Nav = () => {
   useCloseMenuOnNavigate()
   const { menu } = useNav()
@@ -22,10 +23,12 @@ const Nav = () => {
   return (
     <nav>
       <header className={styles.header}>
-        <div className={classNames(styles.item, styles.logo)}>
-          <img src={ToxicIcon} alt="Station" />{" "}
-          <strong className={styles.title}>Toxic Station</strong>
-        </div>
+        <a href="">
+          <div className={classNames(styles.item, styles.logo)}>
+            <img src={ToxicIcon} alt="Station" />{" "}
+            <strong className={styles.title}>Toxic Station</strong>
+          </div>
+        </a>
         {isOpen && (
           <button className={styles.toggle} onClick={close}>
             <CloseIcon />

@@ -57,7 +57,7 @@ export const useThemeState = () => {
       if (!validate(nextTheme)) set(DefaultTheme)
       if (prevTheme.name) document.body.classList.remove(prevTheme.name)
       if (nextTheme.name) document.body.classList.add(nextTheme.name)
-      if(nextTheme.name == "valentines"){
+      if(nextTheme.name === "valentines"){
         const bgImagesValentines = [
           valentinesImage1,
           valentinesImage2,
