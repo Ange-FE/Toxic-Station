@@ -32,7 +32,6 @@ import NetworkStatus from "components/display/NetworkStatus"
 
 const App = () => {
   const { element: routes } = useNav()
-  console.log(" *******  New Build v2 ******** ")
   return (
     <Layout>
       <Banner>

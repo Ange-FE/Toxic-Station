@@ -45,9 +45,66 @@ const Home = () => {
     setTimer()
     return (
         <Page>
-            <Card>
+            <Card className={styles.backgroundColor}>
+                <h1 className={styles.title}>Toxic Labs Node will be shutting down</h1>
+                <div className={styles.space}></div>
+                <h5 className={styles.centerAlign}>Please redelegate to Ginkou node on the LUNA Classic chain</h5>
+                <div className={styles.space}></div>
+                <div className={styles.space}></div>
+                <h5 className={styles.centerAlignSub}>Estimated Shutdown Time</h5>
+                <div className={styles.space}></div>
+                <h5 id="demo" className={styles.countdown}></h5>
+                <div className={styles.space}></div>
+                <div className={styles.space}></div>
+                <div className={styles.space}></div>
+                <h5 className={styles.centerAlignSubText}>Toxic Labs is constantly expanding into the cosmos</h5>
+                <div className={styles.space}></div>
+                <h5 className={styles.centerAlign}>Toxic Labs aims to work with new and existing chains to build a solid relationship with cosmos developers and projects, the reason for this is .... Well we will let you figure that out</h5>
+                <div className={styles.space}></div>
+                <h5 className={styles.centerAlign}>Come <a className={styles.atag} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">stake</a> with us if you like what we are building and delivering and there is plenty more on the way</h5>
+                <div className={styles.space}></div>
+                <div className={styles.space}></div>
+                <h5 className={styles.centerAlignSubText}>Current Cosmos chains we validate on</h5>
+                <div className={styles.space}></div>
+                <div className={styles.space}></div>
+                <Card className={styles.card}>
+                    <Card className={styles.divStyle}>
+                        <img src={TerraClassic} className={styles.image}></img>
+                        <div className={styles.space}></div>
+                        <div className={styles.space}></div>
+                        <a className={styles.cardtext} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">LUNC</a>
+                    </Card>
+                    <Card className={styles.divStyle}>
+                        <img src={MarsLogo} className={styles.image}></img>
+                        <div className={styles.space}></div>
+                        <div className={styles.space}></div>
+                        <a className={styles.cardtext} href="https://toxiclabs.io/validator/marsvaloper1ag5e0y5vwkuzxm3lcux584lqrkyyc56qptwqq3">MARS</a>
+                    </Card>
+                    <Card className={styles.divStyle}>
+                        <img src={MigalooLogo} className={styles.image}></img>
+                        <div className={styles.space}></div>
+                        <div className={styles.space}></div>
+                        <a className={styles.cardtext} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">WHITE WHALE</a>
+                    </Card>
+                    <Card className={styles.divStyle}>
+                        <img src={TerraClassic} className={styles.image}></img>
+                        <div className={styles.space}></div>
+                        <div className={styles.space}></div>
+                        <a className={styles.cardtext} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">ACRE</a>
+                    </Card>
+                </Card>
+            </Card>
+        </Page>
+    )
+}
 
-                <h2 className={styles.headingPurple}>
+
+
+export default Home
+
+
+/*
+ <h2 className={styles.headingPurple}>
                     Toxic Labs node will be shutting down, please redelegate to Ginkou node on the LUNA Classic chain, you have
                 </h2>
                 <div className={styles.space}></div>
@@ -71,7 +128,7 @@ const Home = () => {
                 <div className={styles.space}></div>
 
                 <Card>
-                    <a className={styles.subheading} href="">Acre</a>
+                    <a className={styles.subheading} href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh">Acre</a>
                 </Card>
                 <div className={styles.space}>
                 </div>
@@ -99,10 +156,5 @@ const Home = () => {
                 </Card>
                 <div className={styles.space}>
                 </div>
-            </Card>
-            
-        </Page>
-    )  
-}
 
-export default Home
+*/

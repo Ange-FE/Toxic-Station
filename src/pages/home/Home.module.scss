@@ -1,39 +1,72 @@
+.backgroundColor{
+    background: linear-gradient(to right, rgb(27, 70, 3), rgb(0, 0, 0));
+}
+
 .title{
-    color: darkgreen;
-    font-size: x-large;
+    margin-left: 15%;
+    width: 70%;
+    font-size: xx-large;
+    text-align: center;
 }
 .space{
     height: 10px;
 }
-.image{
-    height: 40px;
-    width: 40px;
-    margin-right: 20px;
-}
-.heading{
-    font-size: x-large;
-    color: white;
+.centerAlign{
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
 }
 
-.subheading{
-    font-size: 20px;
-    color: darkgreen;
+.centerAlignSub{
+    margin-left: 40%;
+    width: 20%;
+    text-align: center;
 }
 
-.headingRed{
-    font-size: xx-large;
-    color: red;
-    width: 30%;
+.countdown{
     margin-left: 35%;
-}
-
-.headingPurple{
+    width: 30%;
     font-size: xx-large;
-    color: purple;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
 }
 
-.logo{
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
+.centerAlignSubText{
+    margin-left: 25%;
+    width: 50%;
+    font-size: large;
+    text-align: center;
+}
+
+.atag{
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(37, 104, 1);
+    padding: 5px;
+    text-decoration:none !important;
+}
+
+.divStyle{
+    width: 23%;
+    float: right;
+    margin-right: 2%;
+}
+
+.image{
+    margin-left: 10%;
+    width: 80%;
+    height: 80%;
+}
+.card{
+    width: 80%;
+    margin-left: 10%;
+    align-items: center;
+}
+
+.cardtext{
+    text-align: center;
+    color: rgb(37, 104, 1);
+    padding: 10%;
 }

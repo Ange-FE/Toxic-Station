@@ -23,7 +23,7 @@ const Nav = () => {
   return (
     <nav>
       <header className={styles.header}>
-        <a href="">
+        <a href="/" className={styles.alink} >
           <div className={classNames(styles.item, styles.logo)}>
             <img src={ToxicIcon} alt="Station" />{" "}
             <strong className={styles.title}>Toxic Station</strong>
