@@ -3,10 +3,11 @@ import styles from "./Home.module.scss"
 import MarsLogo from "./Mars.svg"
 import MigalooLogo from "./Migaloo.svg"
 import TerraClassic from "./TerraClassic.svg"
+import Acre from "./Acre.svg"
 
 const setTimer = () => {
     // Set the date we're counting down to
-    const countDownDate = new Date("march 30, 2023 00:00:01").getTime();
+    const countDownDate = new Date("march 25, 2023 00:00:01").getTime();
 
     // Update the count down every 1 second
     const x = setInterval(function () {
@@ -48,20 +49,22 @@ const Home = () => {
             <Card className={styles.backgroundColor}>
                 <h1 className={styles.title}>Toxic Labs Node will be shutting down</h1>
                 <div className={styles.space}></div>
-                <h5 className={styles.centerAlign}>Please redelegate to Ginkou node on the LUNA Classic chain</h5>
+                <p className={styles.centerAlign}>Please redelegate to Ginkou node on the LUNA Classic chain</p>
                 <div className={styles.space}></div>
                 <div className={styles.space}></div>
-                <h5 className={styles.centerAlignSub}>Estimated Shutdown Time</h5>
+                <p className={styles.centerAlignSub}>Estimated Shutdown Time</p>
+                <div className={styles.space}></div>
+                <div className={styles.space}></div>
                 <div className={styles.space}></div>
                 <h5 id="demo" className={styles.countdown}></h5>
                 <div className={styles.space}></div>
                 <div className={styles.space}></div>
                 <div className={styles.space}></div>
-                <h5 className={styles.centerAlignSubText}>Toxic Labs is constantly expanding into the cosmos</h5>
+                <h2 className={styles.centerAlignSubText}>Toxic Labs is constantly expanding into the cosmos</h2>
                 <div className={styles.space}></div>
-                <h5 className={styles.centerAlign}>Toxic Labs aims to work with new and existing chains to build a solid relationship with cosmos developers and projects, the reason for this is .... Well we will let you figure that out</h5>
+                <p className={styles.centerAlign}>Toxic Labs aims to work with new and existing chains to build a solid relationship with cosmos developers and projects, the reason for this is .... Well we will let you figure that out</p>
                 <div className={styles.space}></div>
-                <h5 className={styles.centerAlign}>Come <a className={styles.atag} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">stake</a> with us if you like what we are building and delivering and there is plenty more on the way</h5>
+                <p className={styles.centerAlign}>Come <a className={styles.atag} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">stake</a> with us if you like what we are building and delivering and there is plenty more on the way</p>
                 <div className={styles.space}></div>
                 <div className={styles.space}></div>
                 <h5 className={styles.centerAlignSubText}>Current Cosmos chains we validate on</h5>
@@ -72,89 +75,56 @@ const Home = () => {
                         <img src={TerraClassic} className={styles.image}></img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
-                        <a className={styles.cardtext} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">LUNC</a>
+                        <a href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl" rel="noreferrer" target="_blank">
+                            <h5 className={styles.cardtext}>LUNC
+
+                            </h5>
+                        </a>
                     </Card>
                     <Card className={styles.divStyle}>
                         <img src={MarsLogo} className={styles.image}></img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
-                        <a className={styles.cardtext} href="https://toxiclabs.io/validator/marsvaloper1ag5e0y5vwkuzxm3lcux584lqrkyyc56qptwqq3">MARS</a>
+                        <a href="https://toxiclabs.io/validator/marsvaloper1ag5e0y5vwkuzxm3lcux584lqrkyyc56qptwqq3" rel="noreferrer" target="_blank">
+                            <h5 className={styles.cardtext}>MARS
+
+                            </h5>
+                        </a>
                     </Card>
                     <Card className={styles.divStyle}>
                         <img src={MigalooLogo} className={styles.image}></img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
-                        <a className={styles.cardtext} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">WHITE WHALE</a>
+                        <a href="https://toxiclabs.io/validator/migaloovaloper1r025wvgdqmx8qvtru7kpck9drynucgygmw4vc5" rel="noreferrer" target="_blank">
+                            <h5 className={styles.cardtext}>WHITE WHALE
+
+                            </h5>
+                        </a>
                     </Card>
                     <Card className={styles.divStyle}>
-                        <img src={TerraClassic} className={styles.image}></img>
+                        <img src={Acre} className={styles.image}></img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
-                        <a className={styles.cardtext} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">ACRE</a>
+                        <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">
+                            <h5 className={styles.cardtext}>ACRE
+
+                            </h5>
+                        </a>
                     </Card>
+                </Card>
+                <div className={styles.space}></div>
+                <Card className={styles.cardBackGround}>
+                        <a href="www.ginkounodes.io" rel="noreferrer" target="_blank">
+                            <h5 className={styles.cardkeplr}>Staking using kepler, we got you covered 
+                                <h5>
+                                    Click Here
+                                </h5>
+                            </h5>
+                        </a>
                 </Card>
             </Card>
         </Page>
     )
 }
-
-
-
 export default Home
 
-
-/*
- <h2 className={styles.headingPurple}>
-                    Toxic Labs node will be shutting down, please redelegate to Ginkou node on the LUNA Classic chain, you have
-                </h2>
-                <div className={styles.space}></div>
-                <h1 id="demo" className={styles.headingRed}></h1>
-                <div className={styles.space}></div>
-
-
-                <h2 className={styles.heading}>
-                    Toxic Labs is Constantly Expanding into the Cosmos
-                </h2>
-                <div className={styles.space}></div>
-                <p>Why is Toxic Labs running Validators on other chains?</p>
-                <div className={styles.space}></div>
-                <p>Toxic Labs aims to work with new and existing chains to build a solid relationship with cosmos developers and projects, the reason for this well.... We will let you figure that out</p>
-                <div className={styles.space}></div>
-                <p>Come stake with us if you like what we are building and delivering and there is plenty more on the way</p>
-                <div className={styles.space}></div>
-                <h2 className={styles.heading}>
-                    Here are the current Cosmos chains we validate on
-                </h2>
-                <div className={styles.space}></div>
-
-                <Card>
-                    <a className={styles.subheading} href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh">Acre</a>
-                </Card>
-                <div className={styles.space}>
-                </div>
-                <Card>
-                    <img className={styles.logo} src={TerraClassic}>
-                    
-                    </img>
-                    <a className={styles.subheading} href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl">LUNC</a>
-                </Card>
-                <div className={styles.space}>
-                </div>
-                <Card>
-                    <img className={styles.logo} src={MarsLogo}>
-                        
-                    </img>
-                    <a className={styles.subheading} href="https://toxiclabs.io/validator/marsvaloper1ag5e0y5vwkuzxm3lcux584lqrkyyc56qptwqq3">MARS</a>
-                </Card>
-                <div className={styles.space}>
-                </div>
-                <Card>
-                    <img className={styles.logo} src={MigalooLogo}>
-                        
-                    </img>
-                    <a className={styles.subheading} href="https://toxiclabs.io/validator/migaloovaloper1r025wvgdqmx8qvtru7kpck9drynucgygmw4vc5">WHITE WHALE</a>
-                </Card>
-                <div className={styles.space}>
-                </div>
-
-*/

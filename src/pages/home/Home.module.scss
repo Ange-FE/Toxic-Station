@@ -28,15 +28,15 @@
     width: 30%;
     font-size: xx-large;
     padding: 10px;
-    border: 2px solid black;
+    border: 3px solid white;
     border-radius: 20px;
     text-align: center;
 }
 
 .centerAlignSubText{
-    margin-left: 25%;
-    width: 50%;
-    font-size: large;
+    margin-left: 15%;
+    width: 70%;
+    font-size: x-large;
     text-align: center;
 }
 
@@ -52,21 +52,40 @@
     width: 23%;
     float: right;
     margin-right: 2%;
+    background-color: rgb(28, 66, 7);
+    border: none;
 }
 
 .image{
-    margin-left: 10%;
-    width: 80%;
-    height: 80%;
+    margin-left: 30%;
+    width: 40%;
+    height: 40%;
 }
 .card{
     width: 80%;
     margin-left: 10%;
     align-items: center;
+    background-color: rgb(18, 37, 8);
+    border: none;
 }
 
+
 .cardtext{
+    font-size: small;
     text-align: center;
-    color: rgb(37, 104, 1);
-    padding: 10%;
+    color: white;
+}
+
+.cardkeplr{
+    font-size: medium;
+    text-align: center;
+    color: white;
+    margin-top: -5px;
+    text-decoration:none !important;
+}
+
+.cardBackGround{
+    background-color:  rgb(18, 37, 8);
+    height: 90px;
+    border: none;
 }
