@@ -31,6 +31,7 @@ import NavButton from "./sections/NavButton"
 import NetworkStatus from "components/display/NetworkStatus"
 
 const App = () => {
+  console.log("Updated")
   const { element: routes } = useNav()
   return (
     <Layout>
