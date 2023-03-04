@@ -194,9 +194,8 @@ export const useNav = () => {
     //{ path: "/networks", element: <ManageNetworksPage /> },
     //{ path: "/network/new", element: <AddNetworkPage /> },
     { path: "/settings", element: <Settings /> },
-
-    /* dev */
     { path: "/labs", element: <Labs /> },
+    /* dev */
 
     /* 404 */
     { path: "*", element: <NotFound /> },
