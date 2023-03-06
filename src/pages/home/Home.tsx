@@ -43,7 +43,6 @@ const setTimer = () => {
 }
 
 const Home = () => {
-    console.log("Updated")
     setTimer()
     return (
         <Page>
