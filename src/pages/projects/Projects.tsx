@@ -18,7 +18,7 @@ const Projects = () => {
                     </h1>
                     <Card>
                         <span>
-                        <img className={styles.image} src={cavern}></img>
+                        <img className={styles.image} src={cavern} alt="Cavern Protocol"></img>
                             <a className={styles.title} href="https://cavernprotocol.com/" rel="noreferrer" target="_blank">Cavern Protocol</a>
                         </span>
                         <p>Based on the money-market principles of Anchor Protocol and with slight added differences, Cavern aims to become a safe place for users to lend and borrow funds by creating a fully decentralized platform.</p>
@@ -35,8 +35,8 @@ const Projects = () => {
                     </h1>
                     <Card>
                         <span>
-                        <img className={styles.image} src={ginkou}></img>
-                            <a className={styles.title} >Coming to your screen soon: Ginkou</a>
+                        <img className={styles.image} src={ginkou} alt="ginkou"></img>
+                            <a className={styles.title} href="https://toxiclabs.io/" rel="noreferrer" target="_blank" >Coming to your screen soon: Ginkou</a>
                         </span>
                         <p>Based on the money-market principles of Cavern Protocol which is Based on the money-market principles of Anchor Protocol and with slight added differences, Ginkou aims to become a safe place for users to lend and borrow funds by creating a fully decentralized platform.</p>
                     </Card>
@@ -46,8 +46,8 @@ const Projects = () => {
                     </div>
                     <Card>
                         <span>
-                            <img className={styles.image} src={ToxicLabsDao}></img>
-                            <a className={styles.title} >Coming to your screen soon: Toxic DEX</a>
+                            <img className={styles.image} src={ToxicLabsDao} alt="toxic labs"></img>
+                            <a className={styles.title} href="https://toxiclabs.io/" rel="noreferrer" target="_blank" >Coming to your screen soon: Toxic DEX</a>
                         </span>
                         <p>The Toxic Dex will allow for swapping LUNC & USTC pairs as well as other assets</p>
                     </Card>

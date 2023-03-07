@@ -5,6 +5,7 @@ import MigalooLogo from "./Migaloo.svg"
 import TerraClassic from "./TerraClassic.svg"
 import Acre from "./Acre.svg"
 import Canto from "./Canto.svg"
+
 const setTimer = () => {
     // Set the date we're counting down to
     const countDownDate = new Date("march 25, 2023 00:00:01").getTime();
@@ -56,7 +57,7 @@ const Home = () => {
                 <div className={styles.space}></div>
                 <div className={styles.space}></div>
                 <div className={styles.space}></div>
-                <h5 id="demo" className={styles.countdown}></h5>
+                <div id="demo" className={styles.countdown}></div>
                 <div className={styles.space}></div>
                 <div className={styles.space}></div>
                 <div className={styles.space}></div>
@@ -72,7 +73,7 @@ const Home = () => {
                 <div className={styles.space}></div>
                 <Card className={styles.card}>
                     <Card className={styles.divStyle}>
-                        <img src={TerraClassic} className={styles.image}></img>
+                        <img src={TerraClassic} className={styles.image} alt="Terra Classic Coin"></img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
                         <a href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl" rel="noreferrer" target="_blank">
@@ -82,7 +83,7 @@ const Home = () => {
                         </a>
                     </Card>
                     <Card className={styles.divStyle}>
-                        <img src={MarsLogo} className={styles.image}></img>
+                        <img src={MarsLogo} className={styles.image} alt="Mars Coin"></img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
                         <a href="https://toxiclabs.io/validator/marsvaloper1ag5e0y5vwkuzxm3lcux584lqrkyyc56qptwqq3" rel="noreferrer" target="_blank">
@@ -92,7 +93,7 @@ const Home = () => {
                         </a>
                     </Card>
                     <Card className={styles.divStyle}>
-                        <img src={MigalooLogo} className={styles.image}></img>
+                        <img src={MigalooLogo} className={styles.image} alt="White Whale Coin"> </img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
                         <a href="https://toxiclabs.io/validator/migaloovaloper1r025wvgdqmx8qvtru7kpck9drynucgygmw4vc5" rel="noreferrer" target="_blank">
@@ -102,7 +103,7 @@ const Home = () => {
                         </a>
                     </Card>
                     <Card className={styles.divStyle}>
-                        <img src={Acre} className={styles.image}></img>
+                        <img src={Acre} className={styles.image} alt="Acre Coin"> </img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
                         <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">
@@ -112,7 +113,7 @@ const Home = () => {
                         </a>
                     </Card>
                     <Card className={styles.divStyle}>
-                        <img src={Canto} className={styles.image}></img>
+                        <img src={Canto} className={styles.image} alt="Canto Coin"> </img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
                         <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">

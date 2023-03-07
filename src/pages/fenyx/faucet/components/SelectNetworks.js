@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import s from './SelectNetworks.module.scss';
+//import s from './SelectNetworks.module.scss';
 import { networks } from '../config';
 import NetworkContext from '../contexts/NetworkContext';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 // import cx from "classnames";
-import { Card, Page } from "components/layout"
+import { Card} from "components/layout"
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify'

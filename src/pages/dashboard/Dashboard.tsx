@@ -18,7 +18,6 @@ const Dashboard = () => {
           }
           <CommunityPool/>
         </header>
-
         <Charts />
       </Col>
     </Page>
