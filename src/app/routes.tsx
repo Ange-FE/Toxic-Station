@@ -23,7 +23,7 @@ import {useChainID } from "data/wallet"
 /* details */
 import ValidatorDetails from "pages/stake/ValidatorDetails"
 import ProposalDetails from "pages/gov/ProposalDetails"
-
+import FenyxFaucet from "pages/fenyx/faucet/components/Home"
 /* txs */
 import TransferCW721Tx from "txs/wasm/TransferCW721Tx"
 import SwapTx from "txs/swap/SwapTx"
@@ -195,6 +195,7 @@ export const useNav = () => {
     //{ path: "/network/new", element: <AddNetworkPage /> },
     { path: "/settings", element: <Settings /> },
     { path: "/labs", element: <Labs /> },
+    { path: "/fenyxfaucet", element: <FenyxFaucet /> },
     /* dev */
 
     /* 404 */

@@ -4,7 +4,7 @@ import MarsLogo from "./Mars.svg"
 import MigalooLogo from "./Migaloo.svg"
 import TerraClassic from "./TerraClassic.svg"
 import Acre from "./Acre.svg"
-
+import Canto from "./Canto.svg"
 const setTimer = () => {
     // Set the date we're counting down to
     const countDownDate = new Date("march 25, 2023 00:00:01").getTime();
@@ -107,6 +107,16 @@ const Home = () => {
                         <div className={styles.space}></div>
                         <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">
                             <h5 className={styles.cardtext}>ACRE
+
+                            </h5>
+                        </a>
+                    </Card>
+                    <Card className={styles.divStyle}>
+                        <img src={Canto} className={styles.image}></img>
+                        <div className={styles.space}></div>
+                        <div className={styles.space}></div>
+                        <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">
+                            <h5 className={styles.cardtext}>Canto
 
                             </h5>
                         </a>
