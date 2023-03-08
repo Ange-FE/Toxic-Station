@@ -23,7 +23,7 @@ import {useChainID } from "data/wallet"
 /* details */
 import ValidatorDetails from "pages/stake/ValidatorDetails"
 import ProposalDetails from "pages/gov/ProposalDetails"
-import FenyxFaucet from "pages/fenyx/faucet/components/Home"
+import QamarFaucet from "pages/qamar/faucet/components/Home"
 /* txs */
 import TransferCW721Tx from "txs/wasm/TransferCW721Tx"
 import SwapTx from "txs/swap/SwapTx"
@@ -119,7 +119,6 @@ export const useNav = () => {
         title: t("Projects"),
         icon: <LaptopChromebookIcon {...ICON_SIZE} />,
       }
-      
     ]
   }else{
     menu = [
@@ -156,7 +155,7 @@ export const useNav = () => {
         element: <Contract />,
         title: t("Contract"),
         icon: <ContractIcon {...ICON_SIZE} />,
-      },
+      }
     ]
   }
   
@@ -195,7 +194,8 @@ export const useNav = () => {
     //{ path: "/network/new", element: <AddNetworkPage /> },
     { path: "/settings", element: <Settings /> },
     { path: "/labs", element: <Labs /> },
-    { path: "/fenyxfaucet", element: <FenyxFaucet /> },
+    { path: "/qamarfaucet", element: <QamarFaucet/> },
+    
     /* dev */
 
     /* 404 */

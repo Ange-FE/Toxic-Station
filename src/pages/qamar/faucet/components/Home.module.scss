@@ -1,0 +1,61 @@
+.card{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+    height: 80%;
+    background: linear-gradient(to right, rgb(27, 70, 3), rgb(0, 0, 0));
+}
+.title{
+    margin-left: 15%;
+    width: 70%;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.inputChain{
+    width: 20%;
+    height: 40px;
+    margin-left: 80%;
+}
+
+
+.centerAlign{
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+}
+.space{
+    height: 10px;
+}
+
+.centerAlignSub{
+    margin-left: 35%;
+    width: 30%;
+}
+
+.input{
+    height: 40px;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    background-color: rgb(27, 70, 3);
+    color: white;
+    font-size: large;
+}
+
+.button{
+    height: 50px;
+    width: 30%;
+    margin-left: 35%;
+    font-size: large;
+    border-radius: 20px;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(27, 70, 3);
+}
+
+.text{
+    padding-top: 10px;
+    align-content: center;
+    text-align: center;
+}

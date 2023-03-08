@@ -93,7 +93,7 @@ const Home = () => {
                         </a>
                     </Card>
                     <Card className={styles.divStyle}>
-                        <img src={MigalooLogo} className={styles.image} alt="White Whale Coin"> </img>
+                        <img src={MigalooLogo} className={styles.image} alt="White Whale Coin"></img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
                         <a href="https://toxiclabs.io/validator/migaloovaloper1r025wvgdqmx8qvtru7kpck9drynucgygmw4vc5" rel="noreferrer" target="_blank">
@@ -103,7 +103,7 @@ const Home = () => {
                         </a>
                     </Card>
                     <Card className={styles.divStyle}>
-                        <img src={Acre} className={styles.image} alt="Acre Coin"> </img>
+                        <img src={Acre} className={styles.image} alt="Acre Coin"></img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
                         <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">
@@ -113,7 +113,7 @@ const Home = () => {
                         </a>
                     </Card>
                     <Card className={styles.divStyle}>
-                        <img src={Canto} className={styles.image} alt="Canto Coin"> </img>
+                        <img src={Canto} className={styles.image} alt="Canto Coin"></img>
                         <div className={styles.space}></div>
                         <div className={styles.space}></div>
                         <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">
