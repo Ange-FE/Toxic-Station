@@ -5,6 +5,7 @@ import MigalooLogo from "./Migaloo.svg"
 import TerraClassic from "./TerraClassic.svg"
 import Acre from "./Acre.svg"
 import Canto from "./Canto.svg"
+import Stride from "./stride.png"
 
 const setTimer = () => {
     // Set the date we're counting down to
@@ -72,66 +73,81 @@ const Home = () => {
                 <div className={styles.space}></div>
                 <div className={styles.space}></div>
                 <Card className={styles.card}>
-                    <Card className={styles.divStyle}>
-                        <img src={TerraClassic} className={styles.image} alt="Terra Classic Coin"></img>
-                        <div className={styles.space}></div>
-                        <div className={styles.space}></div>
-                        <a href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl" rel="noreferrer" target="_blank">
-                            <h5 className={styles.cardtext}>LUNC
+                    <div>
+                        <Card className={styles.divStyle}>
+                            <img src={TerraClassic} className={styles.image} alt="Terra Classic Coin"></img>
+                            <div className={styles.space}></div>
+                            <div className={styles.space}></div>
+                            <a href="https://toxiclabs.io/validator/terravaloper1zdulm0mwm3apyyh66493xrmexca26r39a6pszl" rel="noreferrer" target="_blank">
+                                <h5 className={styles.cardtext}>LUNC
 
-                            </h5>
-                        </a>
-                    </Card>
-                    <Card className={styles.divStyle}>
-                        <img src={MarsLogo} className={styles.image} alt="Mars Coin"></img>
-                        <div className={styles.space}></div>
-                        <div className={styles.space}></div>
-                        <a href="https://toxiclabs.io/validator/marsvaloper1ag5e0y5vwkuzxm3lcux584lqrkyyc56qptwqq3" rel="noreferrer" target="_blank">
-                            <h5 className={styles.cardtext}>MARS
+                                </h5>
+                            </a>
+                        </Card>
+                        <Card className={styles.divStyle}>
+                            <img src={MarsLogo} className={styles.image} alt="Mars Coin"></img>
+                            <div className={styles.space}></div>
+                            <div className={styles.space}></div>
+                            <a href="https://toxiclabs.io/validator/marsvaloper1ag5e0y5vwkuzxm3lcux584lqrkyyc56qptwqq3" rel="noreferrer" target="_blank">
+                                <h5 className={styles.cardtext}>MARS
 
-                            </h5>
-                        </a>
-                    </Card>
-                    <Card className={styles.divStyle}>
-                        <img src={MigalooLogo} className={styles.image} alt="White Whale Coin"></img>
-                        <div className={styles.space}></div>
-                        <div className={styles.space}></div>
-                        <a href="https://toxiclabs.io/validator/migaloovaloper1r025wvgdqmx8qvtru7kpck9drynucgygmw4vc5" rel="noreferrer" target="_blank">
-                            <h5 className={styles.cardtext}>WHITE WHALE
+                                </h5>
+                            </a>
+                        </Card>
+                        <Card className={styles.divStyle}>
+                            <img src={Stride} className={styles.image} alt="STRIDE Coin"></img>
+                            <div className={styles.space}></div>
+                            <div className={styles.space}></div>
+                            <a href="https://ginkounodes.io/stride/staking/stridevaloper1v6l0jh45s0qry2asx6sq6x7al0klvj7zumm0xe" rel="noreferrer" target="_blank">
+                                <h5 className={styles.cardtext}>STRIDE
 
-                            </h5>
-                        </a>
-                    </Card>
-                    <Card className={styles.divStyle}>
-                        <img src={Acre} className={styles.image} alt="Acre Coin"></img>
-                        <div className={styles.space}></div>
-                        <div className={styles.space}></div>
-                        <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">
-                            <h5 className={styles.cardtext}>ACRE
+                                </h5>
+                            </a>
+                        </Card>
+                    </div>
+                    <div className={styles.spaceColor}></div>
+                    <div>
+                        <Card className={styles.divStyle}>
+                            <img src={MigalooLogo} className={styles.image} alt="White Whale Coin"></img>
+                            <div className={styles.space}></div>
+                            <div className={styles.space}></div>
+                            <a href="https://toxiclabs.io/validator/migaloovaloper1r025wvgdqmx8qvtru7kpck9drynucgygmw4vc5" rel="noreferrer" target="_blank">
+                                <h5 className={styles.cardtext}>WHITE WHALE
 
-                            </h5>
-                        </a>
-                    </Card>
-                    <Card className={styles.divStyle}>
-                        <img src={Canto} className={styles.image} alt="Canto Coin"></img>
-                        <div className={styles.space}></div>
-                        <div className={styles.space}></div>
-                        <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">
-                            <h5 className={styles.cardtext}>Canto
+                                </h5>
+                            </a>
+                        </Card>
+                        <Card className={styles.divStyle}>
+                            <img src={Acre} className={styles.image} alt="Acre Coin"></img>
+                            <div className={styles.space}></div>
+                            <div className={styles.space}></div>
+                            <a href="https://cosmosrun.info/acre-mainnet/staking/acrevaloper1083fuy08e3jn583wp96uv7azttthupayjpmpmh" rel="noreferrer" target="_blank">
+                                <h5 className={styles.cardtext}>ACRE
 
-                            </h5>
-                        </a>
-                    </Card>
+                                </h5>
+                            </a>
+                        </Card>
+                        <Card className={styles.divStyle}>
+                            <img src={Canto} className={styles.image} alt="Canto Coin"></img>
+                            <div className={styles.space}></div>
+                            <div className={styles.space}></div>
+                            <a href="https://ginkounodes.io/canto/staking/cantovaloper1uzk8vj9pfuqvqnlsr2lawjekkdkm636e68y634" rel="noreferrer" target="_blank">
+                                <h5 className={styles.cardtext}>CANTO
+
+                                </h5>
+                            </a>
+                        </Card>
+                    </div>
                 </Card>
                 <div className={styles.space}></div>
                 <Card className={styles.cardBackGround}>
-                        <a href="www.ginkounodes.io" rel="noreferrer" target="_blank">
-                            <h5 className={styles.cardkeplr}>Staking using kepler, we got you covered 
-                                <h5>
-                                    Click Here
-                                </h5>
+                    <a href="www.ginkounodes.io" rel="noreferrer" target="_blank">
+                        <h5 className={styles.cardkeplr}>Staking using kepler, we got you covered
+                            <h5>
+                                Click Here
                             </h5>
-                        </a>
+                        </h5>
+                    </a>
                 </Card>
             </Card>
         </Page>
