@@ -32,16 +32,7 @@ const ConnectWallet = ({ renderButton }: Props) => {
       {t("Connect")}
     </Button>
   )
-  
-  /*
-    availableInstallations.push({
-    icon: "",
-    type: availableInstallations[0].type,
-    identifier: "keplr-wallet",
-    name: "Keplr Wallet",
-    url: "https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap"
-  })
-  */
+
   const list = [
     ...availableConnections
       .filter(({ type }) => type !== "READONLY")

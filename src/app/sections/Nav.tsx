@@ -6,29 +6,25 @@ import CloseIcon from "@mui/icons-material/Close"
 import { mobileIsMenuOpenState } from "components/layout"
 import { useNav } from "../routes"
 import styles from "./Nav.module.scss"
-///import { useThemeFavicon } from "data/settings/Theme"
+import { useThemeFavicon } from "data/settings/Theme"
 import { isWalletBarOpen } from "pages/wallet/Wallet"
-import ToxicIcon from "styles/images/menu/ToxicLabsLogo.svg"
 
 const cx = classNames.bind(styles)
-
 
 const Nav = () => {
   useCloseMenuOnNavigate()
   const { menu } = useNav()
-  //const icon = useThemeFavicon()
+  const icon = useThemeFavicon()
   const [isOpen, setIsOpen] = useRecoilState(mobileIsMenuOpenState)
   const close = () => setIsOpen(false)
 
   return (
     <nav>
       <header className={styles.header}>
-        <a href="/" className={styles.alink} >
-          <div className={classNames(styles.item, styles.logo)}>
-            <img src={ToxicIcon} alt="Station" />{" "}
-            <strong className={styles.title}>Toxic Station</strong>
-          </div>
-        </a>
+        <div className={classNames(styles.item, styles.logo)}>
+          <img src={icon} alt="Station" />{" "}
+          <strong className={styles.title}>Station</strong>
+        </div>
         {isOpen && (
           <button className={styles.toggle} onClick={close}>
             <CloseIcon />
@@ -63,7 +59,7 @@ const useCloseMenuOnNavigate = () => {
   useEffect(() => {
     if (isOpen) {
       // close wallet menu on mobile
-      setIsWalletOpen(true)
+      setIsWalletOpen(false)
     }
     setIsOpen(false)
   }, [pathname, setIsOpen, setIsWalletOpen]) // eslint-disable-line react-hooks/exhaustive-deps

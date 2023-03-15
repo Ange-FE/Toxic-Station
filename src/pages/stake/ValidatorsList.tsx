@@ -37,42 +37,26 @@ const ValidatorsList = ({
     delegationsState,
     undelegationsState
   )
-  const MAX_COMMISSION = 0.05
+
   const activeValidators = useMemo(() => {
     if (!validators) return null
     const priorityVals = getPriorityVals(validators)
     const calcRate = getCalcVotingPowerRate(validators)
 
-    if (chainID === "columbus-5") {
-      return validators
-        .filter(({ status, commission }) => (showAll || !getIsUnbonded(status)) && Number(commission.commission_rates.rate) >= MAX_COMMISSION)
-        .map((validator) => {
-          const { operator_address } = validator
-          const voting_power_rate = calcRate(operator_address)
-          return {
-            ...validator,
-            rank:
-              (priorityVals.includes(operator_address) ? 1 : 0) + Math.random(),
-            voting_power_rate,
-          }
-        })
-        .sort((a, b) => b.rank - a.rank)
-    } else {
-      return validators
-        .filter(({ status, commission }) => (showAll || !getIsUnbonded(status)))
-        .map((validator) => {
-          const { operator_address } = validator
-          const voting_power_rate = calcRate(operator_address)
-          return {
-            ...validator,
-            rank:
-              (priorityVals.includes(operator_address) ? 1 : 0) + Math.random(),
-            voting_power_rate,
-          }
-        })
-        .sort((a, b) => b.rank - a.rank)
-    }
-  }, [validators, showAll,chainID])
+    return validators
+      .filter(({ status }) => showAll || !getIsUnbonded(status))
+      .map((validator) => {
+        const { operator_address } = validator
+        const voting_power_rate = calcRate(operator_address)
+        return {
+          ...validator,
+          rank:
+            (priorityVals.includes(operator_address) ? 1 : 0) + Math.random(),
+          voting_power_rate,
+        }
+      })
+      .sort((a, b) => b.rank - a.rank)
+  }, [validators, showAll])
 
   if (!activeValidators) return null
 

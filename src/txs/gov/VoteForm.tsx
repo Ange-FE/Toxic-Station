@@ -56,7 +56,6 @@ const VoteForm = () => {
     estimationTxValues,
     createTx,
     chain,
-    isTaxable: false
   }
 
   return (

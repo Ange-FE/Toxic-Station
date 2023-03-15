@@ -13,11 +13,11 @@ const Links = () => {
   const isConnected = useAddress()
 
   const community = {
-    medium: "https://medium.com/@ToxicLabsDAO",
-    discord: "https://discord.gg/KMAEHcGx",
-    telegram: "https://t.me/ToxicLabs_DAO",
-    twitter: "https://twitter.com/ToxicLabsDAO",
-    github: "https://github.com/ToxicLabs",
+    medium: "https://medium.com/terra-money",
+    discord: "https://terra.sc/discord",
+    telegram: "https://t.me/TerraNetworkLobby",
+    twitter: "https://twitter.com/terra_money",
+    github: "https://github.com/terra-money",
   }
 
   return (

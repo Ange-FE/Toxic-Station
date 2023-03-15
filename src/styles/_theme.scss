@@ -40,22 +40,28 @@
   --button-primary-bg-h: 218;
   --button-primary-bg-s: 94%;
   --button-primary-bg-l: 47%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
+  --button-primary-bg: hsl(
+    var(--button-primary-bg-h),
+    var(--button-primary-bg-s),
+    var(--button-primary-bg-l)
+  );
   --button-danger-bg-h: 356;
   --button-danger-bg-s: 100%;
   --button-danger-bg-l: 67%;
-  --button-danger-bg: hsl(var(--button-danger-bg-h),
-      var(--button-danger-bg-s),
-      var(--button-danger-bg-l));
+  --button-danger-bg: hsl(
+    var(--button-danger-bg-h),
+    var(--button-danger-bg-s),
+    var(--button-danger-bg-l)
+  );
   --button-primary-text: hsl(0 0% 95%);
   --button-default-bg-h: 222;
   --button-default-bg-s: 77%;
   --button-default-bg-l: 95%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
+  --button-default-bg: hsl(
+    var(--button-default-bg-h),
+    var(--button-default-bg-s),
+    var(--button-default-bg-l)
+  );
   --button-default-text: hsl(226 71% 43%);
 
   --menu-bg: hsl(215 100% 33%);
@@ -96,160 +102,33 @@
     --menu-border: var(--card-border);
     --menu-text: var(--text);
   }
-
-  img[alt~="Station"] {
-    //filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(208deg) brightness(106%) contrast(100%);
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
-    padding: 5px;
-    border: 0.15rem solid white;
-  }
-}
-
-.lettuce {
-  --button-primary-bg-h: 218;
-  --button-primary-bg-s: 94%;
-  --button-primary-bg-l: 47%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
-  --button-danger-bg-h: 356;
-  --button-danger-bg-s: 100%;
-  --button-danger-bg-l: 67%;
-  --button-danger-bg: hsl(var(--button-danger-bg-h),
-      var(--button-danger-bg-s),
-      var(--button-danger-bg-l));
-  --button-primary-text: hsl(0 0% 95%);
-  --button-default-bg-h: 222;
-  --button-default-bg-s: 77%;
-  --button-default-bg-l: 95%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
-  --button-default-text: hsl(226 71% 43%);
-
-  --menu-bg: hsl(110, 71%, 50%);
-  --menu-border: hsla(0, 0%, 100%, 0.15);
-  --menu-text: hsl(0 0% 91%);
-
-  --link: var(--button-primary-bg);
-  --text: hsl(226 70% 42%);
-  --text-muted: hsl(226deg 70% 42% / 85%);
-  --chart: hsl(215 90% 57%);
-
-  --bg: hsl(91, 90%, 52%);
-  --bg-muted: hsl(229 73% 97%);
-  --card-bg: hsl(0 0% 100%);
-  --card-bg-muted: hsl(223, 47%, 97%);
-  --card-border: hsl(213, 16%, 89%);
-  --input-bg: var(--card-bg);
-  --input-border: hsl(220 39% 86%);
-
-  --wallet-shadow: 1px 0px 10px 2px rgb(0 0 0 / 31%);
-
-  --info: hsl(221, 91%, 59%);
-  --info-light: hsl(224 82% 60% / 0.1);
-  --warning: hsl(36 98% 50%);
-  --warning-light: hsl(36 98% 50% / 0.1);
-  --success: hsl(168 71% 39%);
-  --success-light: hsl(168 71% 39% / 0.1);
-  --danger: hsl(0, 83%, 60%);
-  --danger-light: hsl(0 83% 60% / 0.1);
-
-  --extension-bg: hsl(227 62% 11%);
-  --extension-text: hsl(210 89% 61%);
-
-  --wallet-shadow-color: rgb(0 0 0 / 31%);
-
-  img[alt~="Station"] {
-    //filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(208deg) brightness(106%) contrast(100%);
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
-    padding: 5px;
-    border: 0.15rem solid white;
-  }
-}
-
-.toxic {
-  --button-primary-bg-h: 125;
-  --button-primary-bg-s: 90%;
-  --button-primary-bg-l: 21%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
-  --button-primary-text: hsl(0 0% 95%);
-  --button-default-bg-h: 240;
-  --button-default-bg-s: 5%;
-  --button-default-bg-l: 22%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
-  --button-default-text: hsl(0 0% 87%);
-
-  --dark-button-hover-only: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      calc(var(--button-default-bg-l) - 2%));
-
-  --menu-bg: hsl(240, 6%, 21%);
-  --menu-border: hsl(240, 5%, 21%);
-  --menu-text: hsl(0, 0%, 91%);
-
-  --link: var(--button-primary-bg);
-  --text: hsl(0, 0%, 95%);
-  --text-muted: hsl(0 0% 55%);
-  --chart: hsl(125 90% 21%);
-
-  --bg: hsl(0, 0%, 12%);
-  --bg-muted: hsl(240 5% 22%);
-  --card-bg: hsl(239, 6%, 17%);
-  --card-bg-muted: hsl(240, 5%, 15%);
-  --card-border: hsl(240 5% 22%);
-  --input-bg: var(--card-bg);
-  --input-border: hsl(0 0% 30%);
-
-  --wallet-shadow: 0 0 15px 3px #000000c7;
-
-  --extension-bg: var(--card-bg);
-  --extension-text: var(--text);
-
-  --wallet-shadow-color: #0000009c;
-
-#station {
-    background-image: url("mainBackground.png");
-    background-size: 100%;
-  }
-
-  img[alt~="Station"] {
-    // filter: brightness(0) saturate(100%) invert(21%) sepia(79%) saturate(1999%) hue-rotate(117deg) brightness(89%) contrast(103%);
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
-    padding: 5px;
-    border: 0.15rem solid white;
-  }
 }
 
 .dark {
   --button-primary-bg-h: 224;
   --button-primary-bg-s: 82%;
   --button-primary-bg-l: 60%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
+  --button-primary-bg: hsl(
+    var(--button-primary-bg-h),
+    var(--button-primary-bg-s),
+    var(--button-primary-bg-l)
+  );
   --button-primary-text: hsl(0 0% 95%);
   --button-default-bg-h: 240;
   --button-default-bg-s: 5%;
   --button-default-bg-l: 22%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
+  --button-default-bg: hsl(
+    var(--button-default-bg-h),
+    var(--button-default-bg-s),
+    var(--button-default-bg-l)
+  );
   --button-default-text: hsl(0 0% 87%);
 
-  --dark-button-hover-only: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      calc(var(--button-default-bg-l) - 2%));
+  --dark-button-hover-only: hsl(
+    var(--button-default-bg-h),
+    var(--button-default-bg-s),
+    calc(var(--button-default-bg-l) - 2%)
+  );
 
   --menu-bg: hsl(240, 6%, 17%);
   --menu-border: hsl(240, 5%, 22%);
@@ -272,33 +151,28 @@
 
   --extension-bg: var(--card-bg);
   --extension-text: var(--text);
-
+  
   --wallet-shadow-color: #0000009c;
-
-  img[alt~="Station"] {
-    //filter: invert(46%) sepia(60%) saturate(4927%) hue-rotate(203deg) brightness(102%) contrast(91%);
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
-    padding: 5px;
-    border: 0.15rem solid white;
-  }
 }
 
-.toxicRose {
+.blossom {
   --button-primary-bg-h: 341;
   --button-primary-bg-s: 100%;
   --button-primary-bg-l: 59%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
+  --button-primary-bg: hsl(
+    var(--button-primary-bg-h),
+    var(--button-primary-bg-s),
+    var(--button-primary-bg-l)
+  );
   --button-primary-text: hsl(0 0% 95%);
   --button-default-bg-h: 331;
   --button-default-bg-s: 100%;
   --button-default-bg-l: 95%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
+  --button-default-bg: hsl(
+    var(--button-default-bg-h),
+    var(--button-default-bg-s),
+    var(--button-default-bg-l)
+  );
   --button-default-text: hsl(342 83% 58%);
 
   --menu-bg: hsl(355 73% 53%);
@@ -333,16 +207,20 @@
   --button-primary-bg-h: 47;
   --button-primary-bg-s: 93%;
   --button-primary-bg-l: 67%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
+  --button-primary-bg: hsl(
+    var(--button-primary-bg-h),
+    var(--button-primary-bg-s),
+    var(--button-primary-bg-l)
+  );
   --button-primary-text: hsl(248 55% 8%);
   --button-default-bg-h: 47;
   --button-default-bg-s: 93%;
   --button-default-bg-l: 67%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
+  --button-default-bg: hsl(
+    var(--button-default-bg-h),
+    var(--button-default-bg-s),
+    var(--button-default-bg-l)
+  );
   --button-default-text: var(--button-primary-text);
 
   --menu-bg: var(--card-bg);
@@ -367,31 +245,26 @@
   --extension-text: hsl(46 100% 90%);
 
   --wallet-shadow-color: #000000c7;
-
-  img[alt~="Station"] {
-    //  filter: invert(82%) sepia(61%) saturate(489%) hue-rotate(339deg) brightness(105%) contrast(95%);
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
-    padding: 5px;
-    border: 0.15rem solid white;
-  }
 }
 
 .whale {
   --button-primary-bg-h: 0;
   --button-primary-bg-s: 0%;
   --button-primary-bg-l: 0%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
+  --button-primary-bg: hsl(
+    var(--button-primary-bg-h),
+    var(--button-primary-bg-s),
+    var(--button-primary-bg-l)
+  );
   --button-primary-text: hsl(0 0% 100%);
   --button-default-bg-h: 0;
   --button-default-bg-s: 0%;
   --button-default-bg-l: 83%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
+  --button-default-bg: hsl(
+    var(--button-default-bg-h),
+    var(--button-default-bg-s),
+    var(--button-default-bg-l)
+  );
   --button-default-text: hsl(0 0% 0%);
 
   --menu-bg: hsl(0 0% 0%);
@@ -420,31 +293,26 @@
 
   --warning: hsl(356 100% 50%);
   --warning-light: hsl(356 100% 50% / 0.1);
-
-  img[alt~="Station"] {
-    // filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(208deg) brightness(106%) contrast(100%);
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
-    padding: 5px;
-    border: 0.15rem solid white;
-  }
 }
 
 .madness {
   --button-primary-bg-h: 116;
   --button-primary-bg-s: 100%;
   --button-primary-bg-l: 54%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
+  --button-primary-bg: hsl(
+    var(--button-primary-bg-h),
+    var(--button-primary-bg-s),
+    var(--button-primary-bg-l)
+  );
   --button-primary-text: hsl(0 0% 8%);
   --button-default-bg-h: 260;
   --button-default-bg-s: 86%;
   --button-default-bg-l: 56%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
+  --button-default-bg: hsl(
+    var(--button-default-bg-h),
+    var(--button-default-bg-s),
+    var(--button-default-bg-l)
+  );
   --button-default-text: hsl(116 100% 54%);
 
   --menu-bg: hsl(260 66% 37%);
@@ -481,168 +349,4 @@
   --danger-light: hsl(333 100% 55% / 0.1);
 
   --border-width: 2px;
-
-  img[alt~="Station"] {
-    //  filter: invert(80%) sepia(22%) saturate(6192%) hue-rotate(64deg) brightness(102%) contrast(116%);
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
-    padding: 5px;
-    border: 0.15rem solid white;
-  }
-}
-
-/* special ocassions */
-
-
-
-
-.valentines {
-  --button-primary-bg-h: 355;
-  --button-primary-bg-s: 99%;
-  --button-primary-bg-l: 46%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
-  --button-primary-text: hsl(0 0% 95%);
-  --button-default-bg-h: 0;
-  --button-default-bg-s: 100%;
-  --button-default-bg-l: 0%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
-  --button-default-text: hsl(355, 98%, 43%);
-
-  //--menu-bg: hsl(355 73% 53%);
-  --menu-bg: hsl(0, 93%, 47%);
-  --menu-border: hsl(0 0% 100% / 0.1);
-  --menu-text: hsl(0 0% 91%);
-
-  --link: hsl(321 100% 72%);
-  //--text: hsl(342 92% 57%);
-  --text: hsl(340, 33%, 93%);
-  --text-muted: hsl(356 100% 76%);
-  //--chart: hsl(345 99% 46%);
-  --chart: hsl(355, 98%, 43%);
-  --bg: hsl(355, 98%, 43%);
-  --bg-muted: hsl(321 100% 97%);
-  //--card-bg: hsl(300 100% 98%);
-  --card-bg: hsl(0, 100%, 2%);
-  --card-bg-muted: var(--button-default-bg);
-  --card-border: hsl(0, 97%, 50%);
-  --input-bg: var(--card-bg);
-  --input-border: hsl(344 100% 92%);
-
-  --wallet-shadow: 1px 0px 13px 2px rgb(63 63 63 / 22%);
-
-  --extension-bg: hsl(340 100% 90%);
-  --extension-text: hsl(355, 98%, 43%);
-
-  --wallet-shadow-color: rgb(63 63 63 / 22%);
-
-  /*
-   #station {
-    background-image: url("ValentinesDay.jpg");
-    background-size: 100%;
-  }
-  */
- 
-}
-
-.christmas {
-  --button-primary-bg-h: 355;
-  --button-primary-bg-s: 99%;
-  --button-primary-bg-l: 46%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
-  --button-primary-text: hsl(0 0% 95%);
-  --button-default-bg-h: 0;
-  --button-default-bg-s: 100%;
-  --button-default-bg-l: 0%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
-  --button-default-text: hsl(355, 98%, 43%);
-
-  //--menu-bg: hsl(355 73% 53%);
-  --menu-bg: hsl(0, 93%, 47%);
-  --menu-border: hsl(0 0% 100% / 0.1);
-  --menu-text: hsl(0 0% 91%);
-
-  --link: hsl(321 100% 72%);
-  //--text: hsl(342 92% 57%);
-  --text: hsl(340, 33%, 93%);
-  --text-muted: hsl(356 100% 76%);
-  //--chart: hsl(345 99% 46%);
-  --chart: hsl(355, 98%, 43%);
-  --bg: hsl(355, 98%, 43%);
-  --bg-muted: hsl(321 100% 97%);
-  //--card-bg: hsl(300 100% 98%);
-  --card-bg: hsl(0, 100%, 2%);
-  --card-bg-muted: var(--button-default-bg);
-  --card-border: hsl(0, 97%, 50%);
-  --input-bg: var(--card-bg);
-  --input-border: hsl(344 100% 92%);
-
-  --wallet-shadow: 1px 0px 13px 2px rgb(63 63 63 / 22%);
-
-  --extension-bg: hsl(340 100% 90%);
-  --extension-text: hsl(355, 98%, 43%);
-
-  --wallet-shadow-color: rgb(63 63 63 / 22%);
-  
-  #station {
-    background-image: url("ValentinesDay.jpg");
-    background-size: 100%;
-  }
-}
-
-.halloween {
-  --button-primary-bg-h: 355;
-  --button-primary-bg-s: 99%;
-  --button-primary-bg-l: 46%;
-  --button-primary-bg: hsl(var(--button-primary-bg-h),
-      var(--button-primary-bg-s),
-      var(--button-primary-bg-l));
-  --button-primary-text: hsl(0 0% 95%);
-  --button-default-bg-h: 0;
-  --button-default-bg-s: 100%;
-  --button-default-bg-l: 0%;
-  --button-default-bg: hsl(var(--button-default-bg-h),
-      var(--button-default-bg-s),
-      var(--button-default-bg-l));
-  --button-default-text: hsl(355, 98%, 43%);
-
-  //--menu-bg: hsl(355 73% 53%);
-  --menu-bg: hsl(0, 93%, 47%);
-  --menu-border: hsl(0 0% 100% / 0.1);
-  --menu-text: hsl(0 0% 91%);
-
-  --link: hsl(321 100% 72%);
-  //--text: hsl(342 92% 57%);
-  --text: hsl(340, 33%, 93%);
-  --text-muted: hsl(356 100% 76%);
-  //--chart: hsl(345 99% 46%);
-  --chart: hsl(355, 98%, 43%);
-  --bg: hsl(355, 98%, 43%);
-  --bg-muted: hsl(321 100% 97%);
-  //--card-bg: hsl(300 100% 98%);
-  --card-bg: hsl(0, 100%, 2%);
-  --card-bg-muted: var(--button-default-bg);
-  --card-border: hsl(0, 97%, 50%);
-  --input-bg: var(--card-bg);
-  --input-border: hsl(344 100% 92%);
-
-  --wallet-shadow: 1px 0px 13px 2px rgb(63 63 63 / 22%);
-
-  --extension-bg: hsl(340 100% 90%);
-  --extension-text: hsl(355, 98%, 43%);
-
-  --wallet-shadow-color: rgb(63 63 63 / 22%);
-  
-  #station {
-    background-image: url("ValentinesDay.jpg");
-    background-size: 100%;
-  }
 }

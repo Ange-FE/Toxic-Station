@@ -4,6 +4,7 @@ import { ExtraActions } from "components/layout"
 
 const ContractActions = () => {
   const { t } = useTranslation()
+
   return (
     <ExtraActions>
       <LinkButton to="/contract/store" color="primary" size="small">

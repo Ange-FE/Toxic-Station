@@ -4,10 +4,12 @@ import { Col, Page } from "components/layout"
 import CommunityPool from "./CommunityPool"
 import Charts from "./Charts"
 import styles from "./Dashboard.module.scss"
+
 const cx = classNames.bind(styles)
 
 const Dashboard = () => {
   const { t } = useTranslation()
+
   return (
     <Page title={t("Dashboard")}>
       <Col>
@@ -16,8 +18,9 @@ const Dashboard = () => {
             // TODO: recreate LunaPrice with coingecko API
             // isClassic && <LunaPrice />
           }
-          <CommunityPool/>
+          <CommunityPool />
         </header>
+
         <Charts />
       </Col>
     </Page>

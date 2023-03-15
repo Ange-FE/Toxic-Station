@@ -14,21 +14,20 @@ export enum SettingKey {
   ClassicGasAdjustment = "ClassicGasAdjustment",
   AddressBook = "AddressBook", // Send
   HideNonWhitelistTokens = "HideNonWhiteListTokens",
-  Network = "Network",
+  Chain = "Chain",
   CustomLCD = "CustomLCD",
   HideLowBalTokens = "HideLowBalTokens",
   CustomTokens = "CustomTokens", // Wallet
   MinimumValue = "MinimumValue", // Wallet (UST value to show on the list)
   WithdrawAs = "WithdrawAs", // Rewards (Preferred denom to withdraw rewards)
+  EnabledNetworks = "EnabledNetworks",
+  NetworkCacheTime = "NetworkCacheTime",
 }
-/*
+
 const isSystemDarkMode =
   window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
-*/
 
-
-
-export const DefaultTheme = themes[0]
+export const DefaultTheme = themes[Number(isSystemDarkMode)]
 
 export const DefaultCustomTokensItem = {
   cw20: [],
@@ -54,10 +53,12 @@ export const DefaultSettings = {
   [SettingKey.AddressBook]: [] as AddressBook[],
   [SettingKey.CustomTokens]: DefaultCustomTokens as CustomTokens,
   [SettingKey.MinimumValue]: 0,
+  [SettingKey.NetworkCacheTime]: 0,
   [SettingKey.HideNonWhitelistTokens]: true,
   [SettingKey.HideLowBalTokens]: true,
   [SettingKey.WithdrawAs]: "",
-  [SettingKey.Network]: "",
+  [SettingKey.Chain]: "",
+  [SettingKey.EnabledNetworks]: { time: 0, networks: [] as string[] },
   [SettingKey.CustomLCD]: {},
 }
 
@@ -88,9 +89,9 @@ export const hideLowBalTokenState = atom({
   default: !!getLocalSetting(SettingKey.HideLowBalTokens),
 })
 
-export const savedNetworkState = atom({
+export const savedChainState = atom({
   key: "savedNetwork",
-  default: getLocalSetting(SettingKey.Network) as string | undefined,
+  default: getLocalSetting(SettingKey.Chain) as string | undefined,
 })
 
 export const customLCDState = atom({
@@ -100,16 +101,16 @@ export const customLCDState = atom({
   ),
 })
 
-export const useSavedNetwork = () => {
-  const [savedNetwork, setSavedNetwork] = useRecoilState(savedNetworkState)
-  const changeSavedNetwork = useCallback(
-    (newNetwork: string | undefined) => {
-      setLocalSetting(SettingKey.Network, newNetwork)
-      setSavedNetwork(newNetwork)
+export const useSavedChain = () => {
+  const [savedChain, setSavedChain] = useRecoilState(savedChainState)
+  const changeSavedChain = useCallback(
+    (newChain: string | undefined) => {
+      setLocalSetting(SettingKey.Chain, newChain)
+      setSavedChain(newChain)
     },
-    [setSavedNetwork]
+    [setSavedChain]
   )
-  return { savedNetwork, changeSavedNetwork }
+  return { savedChain, changeSavedChain }
 }
 
 export const useCustomLCDs = () => {
