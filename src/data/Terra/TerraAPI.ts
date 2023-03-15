@@ -27,19 +27,9 @@ export enum AggregateWallets {
 
 export const useTerraAPIURL = () => {
   const network = useNetworkName()
-  if(network === "mainnet"){
-    return "https://phoenix-api.terra.dev"
-  }else if (network === "classic"){
-    return "https://columbus-api.terra.dev"
-  }else{
-    return "https://pisco-api.terra.dev"
-  }
-  /*
   return network !== "mainnet"
     ? "https://pisco-api.terra.dev"
     : "https://phoenix-api.terra.dev"
-  */
-  
 }
 
 export const useIsTerraAPIAvailable = () => {

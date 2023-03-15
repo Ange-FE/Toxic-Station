@@ -1,9 +1,6 @@
 import { AccAddress } from "@terra-money/feather.js"
-import { FinderLink } from "components/general"
 import { getChainNamefromID } from "data/queries/chains"
 import { useNetwork, useAddress } from "data/wallet"
-import { truncate } from "@terra.kitchen/utils"
-import { CopyIcon } from "components/general"
 import { TokenIcon } from "components/token"
 import { useInterchainAddresses } from "auth/hooks/useAddress"
 import { Table } from "components/layout"
@@ -12,7 +9,6 @@ import { useTranslation } from "react-i18next"
 import WithSearchInput from "pages/custom/WithSearchInput"
 import AddressBox from "components/form/AddressBox"
 import { useBankBalance } from "data/queries/bank"
-import { useMemo } from "react"
 
 interface Props {
   finderLink?: boolean // either display finder link if true or AddressBox comp
@@ -27,27 +23,28 @@ const AddressTable = (props: Props) => {
   const { t } = useTranslation()
   const coins = useBankBalance()
 
-  const addressData = useMemo(
-    () =>
-      Object.keys(addresses)
-        .map((key) => ({
-          address: addresses?.[key],
-          chainName: getChainNamefromID(key, networks) ?? key,
-          id: key,
-        }))
-        .sort((a) => (coins.some(({ chain }) => chain === a.id) ? -1 : 1)),
-    [addresses, coins, networks]
+  const NotConnected = () => (
+    <p className={styles.connect}>
+      {t("Connect a wallet to see your addresses")}
+    </p>
   )
 
-  if (!isConnected)
-    return (
-      <p className={styles.connect}>
-        {t("Connect a wallet to see your addresses")}
-      </p>
-    )
+  if (!isConnected) return <NotConnected />
+
+  const addressData = Object.keys(addresses)
+    .map((key) => ({
+      address: addresses?.[key],
+      chainName: getChainNamefromID(key, networks) ?? key,
+      id: key,
+    }))
+    .sort((a) => (coins.some(({ chain }) => chain === a.id) ? -1 : 1))
 
   return (
-    <WithSearchInput gap={10} placeholder={t("Search for a chain...")}>
+    <WithSearchInput
+      gap={10}
+      placeholder={t("Search for a chain...")}
+      className={styles.grid__override}
+    >
       {(keyword: string) => (
         <Table
           className={className}
@@ -75,19 +72,11 @@ const AddressTable = (props: Props) => {
               ),
             },
             {
-              dataIndex: "address",
-              hidden: !finderLink,
-              render: (address: AccAddress) => (
-                <div className={styles.address}>
-                  <FinderLink value={address}>{truncate(address)}</FinderLink>
-                  <CopyIcon text={address} />
-                </div>
-              ),
-            },
-            {
               hidden: finderLink,
               dataIndex: "address",
-              render: (address: AccAddress) => <AddressBox address={address} />,
+              render: (address: AccAddress) => (
+                <AddressBox withQR address={address} />
+              ),
             },
           ]}
         />

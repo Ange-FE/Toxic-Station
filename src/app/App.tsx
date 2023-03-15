@@ -32,6 +32,7 @@ import NetworkStatus from "components/display/NetworkStatus"
 
 const App = () => {
   const { element: routes } = useNav()
+
   return (
     <Layout>
       <Banner>

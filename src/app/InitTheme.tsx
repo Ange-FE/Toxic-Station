@@ -7,8 +7,6 @@ const InitTheme = () => {
   const validate = useValidateTheme()
   const valid = validate(theme)
 
-  
-
   useEffect(() => {
     setTheme(valid ? theme : DefaultTheme)
   }, [valid, theme, setTheme])

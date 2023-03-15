@@ -53,7 +53,7 @@ interface Props<TxValues> {
   coins?: CoinInput[]
   balance?: Amount
   gasAdjustment?: number
-  isTaxable: Boolean
+
   /* tx simulation */
   estimationTxValues?: TxValues
   createTx: (values: TxValues) => CreateTxOptions | undefined
@@ -80,12 +80,9 @@ interface RenderProps<TxValues> {
   submit: { fn: (values: TxValues) => Promise<void>; button: ReactNode }
 }
 
-
-
-
 function Tx<TxValues>(props: Props<TxValues>) {
-  const { token, decimals, amount, balance, chain, } = props
-  const { estimationTxValues, createTx, gasAdjustment: txGasAdjustment, isTaxable } = props
+  const { token, decimals, amount, balance, chain } = props
+  const { estimationTxValues, createTx, gasAdjustment: txGasAdjustment,isTaxable } = props
   const { children, onChangeMax } = props
   const { onPost, redirectAfterTx, queryKeys, onSuccess } = props
 
@@ -104,6 +101,8 @@ function Tx<TxValues>(props: Props<TxValues>) {
   const setLatestTx = useSetRecoilState(latestTxState)
   const isBroadcasting = useRecoilValue(isBroadcastingState)
   const readNativeDenom = useNativeDenoms()
+
+  /* taxes */
   const isClassic = networks[chain]?.isClassic
   const shouldTax = isClassic && getShouldTax(token, isClassic)
   const { data: taxRate = "0", ...taxRateState } = useTaxRate(!shouldTax)
@@ -111,10 +110,10 @@ function Tx<TxValues>(props: Props<TxValues>) {
   const taxState = combineState(taxRateState, taxCapState)
   const taxes = isClassic
     ? calcTaxes(
-      props.coins ?? ([{ input: 0, denom: token }] as CoinInput[]),
-      { taxRate, taxCap },
-      !!isClassic
-    )
+        props.coins ?? ([{ input: 0, denom: token }] as CoinInput[]),
+        { taxRate, taxCap },
+        !!isClassic
+      )
     : undefined
 
   /* simulation: estimate gas */
@@ -184,8 +183,8 @@ function Tx<TxValues>(props: Props<TxValues>) {
   const max = !gasFee.amount
     ? undefined
     : isDenom(token)
-      ? getNativeMax()
-      : balance
+    ? getNativeMax()
+    : balance
 
   /* (effect): Call the onChangeMax function whenever the max changes */
   useEffect(() => {
@@ -197,6 +196,7 @@ function Tx<TxValues>(props: Props<TxValues>) {
     token && amount && shouldTax && isTaxable
       ? calcMinimumTaxAmount(amount, { rate: taxRate, cap: taxCap })
       : undefined
+
   /* (effect): Log error on console */
   const failed = getErrorMessage(taxState.error ?? estimatedGasState.error)
   useEffect(() => {
@@ -218,14 +218,14 @@ function Tx<TxValues>(props: Props<TxValues>) {
   const disabled = estimatedGasState.isLoading
     ? t("Estimating fee...")
     : taxState.isLoading
-      ? t("Loading tax data...")
-      : taxState.error
-        ? t("Failed to load tax data")
-        : estimatedGasState.error
-          ? t("Fee estimation failed")
-          : isBroadcasting
-            ? t("Broadcasting a tx...")
-            : props.disabled || ""
+    ? t("Loading tax data...")
+    : taxState.error
+    ? t("Failed to load tax data")
+    : estimatedGasState.error
+    ? t("Fee estimation failed")
+    : isBroadcasting
+    ? t("Broadcasting a tx...")
+    : props.disabled || ""
 
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<Error>()
@@ -254,28 +254,26 @@ function Tx<TxValues>(props: Props<TxValues>) {
       const feeCoins = taxCoins ? gasCoins.add(taxCoins) : gasCoins
       const fee = new Fee(estimatedGas, feeCoins)
 
+      const latestTxBase = {
+        queryKeys,
+        redirectAfterTx,
+        chainID: chain,
+        onSuccess: () => {
+          if (onSuccess) onSuccess()
+          setPassword("") // required for desktop form clear
+        },
+      }
+
       if (isWallet.multisig(wallet)) {
         // TODO: broadcast only to terra if wallet is multisig
         const unsignedTx = await auth.create({ ...tx, fee })
         navigate(toPostMultisigTx(unsignedTx))
       } else if (wallet) {
-        const result = await auth.post({ ...tx, fee }, password)
-        setLatestTx({
-          txhash: result.txhash,
-          queryKeys,
-          redirectAfterTx,
-          chainID: chain,
-          onSuccess,
-        })
+        const { txhash } = await auth.post({ ...tx, fee }, password)
+        setLatestTx({ txhash, ...latestTxBase })
       } else {
         const { result } = await post({ ...tx, fee })
-        setLatestTx({
-          txhash: result.txhash,
-          queryKeys,
-          redirectAfterTx,
-          chainID: chain,
-          onSuccess,
-        })
+        setLatestTx({ txhash: result.txhash, ...latestTxBase })
       }
 
       onPost?.()
@@ -393,10 +391,10 @@ function Tx<TxValues>(props: Props<TxValues>) {
     connectedWallet?.connectType === ConnectType.READONLY
       ? t("Wallet is connected as read-only mode")
       : !availableGasDenoms.length
-        ? t("Insufficient balance to pay transaction fee")
-        : isWalletEmpty
-          ? t("Coins required to post transactions")
-          : ""
+      ? t("Insufficient balance to pay transaction fee")
+      : isWalletEmpty
+      ? t("Coins required to post transactions")
+      : ""
 
   const submitButton = (
     <>
@@ -443,23 +441,23 @@ function Tx<TxValues>(props: Props<TxValues>) {
   const modal = !error
     ? undefined
     : {
-      title:
-        error instanceof UserDenied ||
+        title:
+          error instanceof UserDenied ||
           error?.toString().includes("UserDenied")
-          ? t("Transaction was denied by user")
-          : error instanceof CreateTxFailed
+            ? t("Transaction was denied by user")
+            : error instanceof CreateTxFailed
             ? t("Failed to create tx")
             : error instanceof TxFailed
-              ? t("Tx failed")
-              : t("Error"),
-      children:
-        error instanceof UserDenied ||
+            ? t("Tx failed")
+            : t("Error"),
+        children:
+          error instanceof UserDenied ||
           error?.toString().includes("UserDenied") ? null : (
-          <Pre height={120} normal break>
-            {error?.message}
-          </Pre>
-        ),
-    }
+            <Pre height={120} normal break>
+              {error?.message}
+            </Pre>
+          ),
+      }
 
   return (
     <>

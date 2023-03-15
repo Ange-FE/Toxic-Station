@@ -6,14 +6,14 @@ import { Card } from "components/layout"
 import { Read } from "components/token"
 import SelectDenom from "./components/SelectDenom"
 import DashboardContent from "./components/DashboardContent"
-import {useChainID } from "data/wallet"
 
 const CommunityPool = () => {
   const { t } = useTranslation()
   const title = t("Community pool")
-  const chainID = useChainID()
-  const { data, ...state } = useCommunityPool(chainID)
+
+  const { data, ...state } = useCommunityPool("phoenix-1")
   const calcValue = useMemoizedCalcValue()
+
   const render = () => {
     if (!data) return null
     const amount = getAmount(data, "uluna")
